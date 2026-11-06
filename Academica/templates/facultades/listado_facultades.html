@@ -1,0 +1,40 @@
+{% extends 'facultades/base.html' %}
+
+{% block title %} Listado de facultades {% endblock %}
+
+{% block content %}
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    {% for f in facultades %}
+    <tr>
+      <th scope="row">{{f.faculty_id}}</th>
+      <td>{{f.faculty_name}}</td>
+      <td>{{f.faculty_description}}</td>
+      <td>
+  {% if f.faculty_imagen %}
+    <img src="{{ f.faculty_imagen.url }}" alt="Imagen de facultad" width="100">
+{% else %}
+    <p>Sin imagen</p>
+{% endif %}
+      <td>
+        <a>Editar</a>
+        <a>Eliminar</a>
+      </td>
+    </tr>
+
+    {% endfor %}
+   
+  </tbody>
+</table>
+
+{% endblock %}
