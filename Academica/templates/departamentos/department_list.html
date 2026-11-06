@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% block title %} Lista de Departamentos {% endblock %}
+
+
+{% block content %}
+
+
+<div class="container mt-4">
+
+
+    <h1 class="mb-4">Lista de Departamentos</h1>
+
+
+    <table class="table table-striped table-hover table-bordered">
+
+
+        <thead class="table-dark">
+            <tr>
+                <th scope="col">ID </th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Descripción</th>
+                <th scope="col">Imagen</th>
+            </tr>
+        </thead>
+
+
+        <tbody>
+
+
+            {% for d in departamentos %}
+
+
+            <tr>
+                <th scope="row">{{ d.department_id }}</th>
+                <td>{{ d.department_name }}</td>
+                <td>{{ d.department_faculty.faculty_name }}</td>
+                <td>
+                    {% if d.department_imagen %}
+                    <img src="{{ d.department_imagen.url }}" alt="Imagen de departamento" width="100">
+                    {% else %}
+                    <p>Sin imagen</p>
+                    {% endif %}
+                </td>
+                <td>
+                    <a href="#" class="btn btn-warning btn-sm">
+                        Editar
+                    </a>
+                    <a href="#" class="btn btn-danger btn-sm">
+                        Eliminar
+                    </a>
+                </td>
+            </tr>
+            {% empty %}
+
+            <tr>
+                <td colspan="5" class="text-center">
+                    No hay departamentos registrados registradas.
+                </td>
+            </tr>
+
+
+            {% endfor %}
+
+
+        </tbody>
+
+
+    </table>
+
+
+</div>
+
+
+{% endblock %}

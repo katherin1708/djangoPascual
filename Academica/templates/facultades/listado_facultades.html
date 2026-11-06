@@ -1,4 +1,4 @@
-{% extends 'facultades/base.html' %}
+{% extends 'base.html' %}
 
 {% block title %} Listado de facultades {% endblock %}
 
@@ -7,12 +7,13 @@
 <table class="table">
   <thead>
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">ID</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Descripción</th>
+      <th scope="col">Imagen</th>
     </tr>
   </thead>
+  
   <tbody>
 
     {% for f in facultades %}
@@ -21,11 +22,12 @@
       <td>{{f.faculty_name}}</td>
       <td>{{f.faculty_description}}</td>
       <td>
-  {% if f.faculty_imagen %}
-    <img src="{{ f.faculty_imagen.url }}" alt="Imagen de facultad" width="100">
-{% else %}
-    <p>Sin imagen</p>
-{% endif %}
+        {% if f.faculty_imagen %}
+        <img src="{{ f.faculty_imagen.url }}" alt="Imagen de facultad" width="100">
+        {% else %}
+        <p>Sin imagen</p>
+        {% endif %}
+      </td>
       <td>
         <a>Editar</a>
         <a>Eliminar</a>
@@ -33,7 +35,7 @@
     </tr>
 
     {% endfor %}
-   
+
   </tbody>
 </table>
 

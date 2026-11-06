@@ -3,14 +3,17 @@
 from django.contrib import admin
 from django.urls import path
 from Academica.views import listadoFacultades
+from Academica.views import listadoDepartamentos
 from django.conf import settings
 from django.conf.urls.static import static
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path  ('facultades/',listadoFacultades)
+    path  ('facultades/',listadoFacultades),
+    path  ('departamentos/',listadoDepartamentos),
 ]
+
 
 
 if settings.DEBUG:

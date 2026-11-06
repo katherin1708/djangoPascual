@@ -1,0 +1,83 @@
+[
+{
+  "model": "Academica.faculty",
+  "pk": "1",
+  "fields": {
+    "faculty_name": "Facultad de ingenieria",
+    "faculty_description": "Es la unidad academica de una universidad dedicada a la formacion integral de profesionales, la investigacion cientifica, el desarrollo tecnologico y la vinculacion con la sociedad y la industria",
+    "faculty_imagen": "faculties/images.jpeg"
+  }
+},
+{
+  "model": "Academica.faculty",
+  "pk": "2",
+  "fields": {
+    "faculty_name": "Facultad de diseno",
+    "faculty_description": "Es una unidad academica que combina la vision estrategica, la tecnologia y el diseno para transformar ideas en proyectos industriales, productos y servicios innovadores.",
+    "faculty_imagen": ""
+  }
+},
+{
+  "model": "Academica.faculty",
+  "pk": "3",
+  "fields": {
+    "faculty_name": "Facultad de produccion",
+    "faculty_description": "proyectos industriales, productos y servicios innovadores.\r\nEs una unidad academica que combina la vision estrategica, la tecnologia y el diseno para transformar ideas en proyectos industriales, productos y servicios innovadores.",
+    "faculty_imagen": ""
+  }
+},
+{
+  "model": "Academica.faculty",
+  "pk": "4",
+  "fields": {
+    "faculty_name": "Facultad de ciencias de la salud",
+    "faculty_description": "Es una unidad academica que combina la vision estrategica la tecnologia y el diseno para transformar ideas en proyectos industriales productos y servicios innovadores",
+    "faculty_imagen": ""
+  }
+},
+{
+  "model": "Academica.faculty",
+  "pk": "5",
+  "fields": {
+    "faculty_name": "Facultad de ciencias humanas",
+    "faculty_description": "Son unidades academicas universitarias dedicadas al estudio de la condicion humana la cultura la sociedad el pensamiento y las expresiones artisticas e historicas",
+    "faculty_imagen": ""
+  }
+},
+{
+  "model": "Academica.department",
+  "pk": "1",
+  "fields": {
+    "department_name": "Matematicas",
+    "faculty": "1",
+    "department_imagen": ""
+  }
+},
+{
+  "model": "Academica.department",
+  "pk": "2",
+  "fields": {
+    "department_name": "sistemas",
+    "faculty": "1",
+    "department_imagen": ""
+  }
+},
+{
+  "model": "Academica.department",
+  "pk": "3",
+  "fields": {
+    "department_name": "Mecanica",
+    "faculty": "1",
+    "department_imagen": ""
+  }
+},
+{
+  "model": "Academica.department",
+  "pk": "4",
+  "fields": {
+    "department_name": "Electronica",
+    "faculty": "1",
+    "department_imagen": ""
+  }
+}
+]

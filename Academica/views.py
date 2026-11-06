@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from Academica.models import Faculty
+from Academica.models import Faculty , Department
 
 # Create your views here.
 
@@ -9,3 +9,7 @@ def listadoFacultades(request):
                  {'facultades':facultades})
                  
 
+def listadoDepartamentos(request):
+    departamentos = Department.objects.select_related('faculty')
+    return render(request, 'departamentos/department_list.html',
+                     {'departamentos': departamentos })
